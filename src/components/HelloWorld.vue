@@ -3,8 +3,12 @@
     <p>Hello Vue in CodeSandbox!</p>
 
     <ButtonClicker/>
+    <p>
+    {{ count }}
+    </p>
     <Template/>
     <SayWhat/>
+    <blog-post></blog-post>
   </div>
 </template>
 
@@ -12,11 +16,13 @@
 import ButtonClicker from "/src/components/ButtonClicker.vue";
 import Template from "/src/components/template.vue";
 import SayWhat from "/src/components/SayWhat.vue";
+import BlogPost from "/src/components/BlogPost.vue";
+
 export default {
   components: {
     ButtonClicker,
     Template,
-    SayWhat
+    SayWhat, BlogPost
   }
 };
 </script>
