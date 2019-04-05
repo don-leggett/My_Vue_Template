@@ -1,8 +1,6 @@
 <template>
   <div id="example-1">
-    <div>
-      <b-form-input type="text" :value="value" v-on="listeners"/>
-    </div>
+    
     <b-card-group deck>
       <b-card
         border-variant="primary"
@@ -18,11 +16,12 @@
 </template>
 
 <script>
-import HelloWorld from "/src/components/HelloWorld";
+//import HelloWorld from "/src/components/HelloWorld";
 
 export default {
   //Components
-
+   components: {
+    },
   //Data
   data() {
     return {
@@ -38,37 +37,15 @@ export default {
   methods: {
     back() {
       this.$router.push("/");
-    },
-    singleMovie(id) {
-      this.$router.push("/movie/" + id);
     }
   },
   //Mounted
-  mounted() {
-    movieApi
-      .fetchSingleMovie(this.id)
-      .then(response => {
-        this.singleMovie = response;
-        this.ratings = this.singleMovie.Ratings;
-        this.ratings.forEach(function(element) {
-          element.Value = parseFloat(element.Value.split(/\/|%/)[0]);
-          element.Value =
-            element.Value <= 10 ? element.Value / 2 : element.Value / 20;
-        });
-        this.loading = false;
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  },
+  mounted() {},
   //Computed
   computed: {},
   //Watch
-  watch: {
-    name(value) {
-      this.fetchResult(value);
-    }
-  }
+  watch: {}
+  
 };
 </script>
 
