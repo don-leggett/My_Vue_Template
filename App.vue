@@ -3,14 +3,11 @@
     <img width="25%" src="./src/assets/logo.png">
 
     <HelloWorld/>
-
-   
   </div>
 </template>
 
 <script>
 import HelloWorld from "/src/components/HelloWorld.vue";
-
 
 export default {
   name: "App",
